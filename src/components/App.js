@@ -35,9 +35,18 @@ class App extends React.Component {
     }
   }
 
+  // adoptPet = (id) => {
+  //   return this.state.pets.map(pet => {
+  //     return pet.id === id
+  //     ? this.setState({ ...pet, isAdopted: true })
+  //     : pet
+  //   })
+  // }
+
   adoptPet = (id) => {
-    this.state.pets.map(pet => {
-      return pet.id === id ? pet : null
+    let pets = this.state.pets.map(pet => {return pet.id === id ? {...pet, isAdopted: true} : pet})
+    this.setState({
+      pets
     })
   }
 

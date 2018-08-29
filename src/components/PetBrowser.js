@@ -9,13 +9,7 @@ class PetBrowser extends React.Component {
     return this.props.pets.map((pet, index) => {
       return <Pet
         key={index}
-        id={pet.id}
-        name={pet.name}
-        gender={pet.gender}
-        age={pet.age}
-        weight={pet.weight}
-        adopted={pet.isAdopted}
-        type={pet.type}
+        pet={pet}
         onAdoptPet={this.props.onAdoptPet}
       />
     })
